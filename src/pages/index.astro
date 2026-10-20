@@ -1,0 +1,337 @@
+---
+const authors = [
+  {
+    slug:'pushkin', name:'亚历山大·普希金', ru:'Александр Пушкин', years:'1799—1837', era:'十九世纪俄罗斯文学的奠基者', image:'/images/pushkin.webp', scene:'/images/pushkin-scene.webp',
+    concept:'自由、尊严与道德选择', conceptRu:'Свобода, человеческое достоинство и нравственный выбор',
+    intro:'普希金以明亮而复杂的诗性语言，书写个体与社会、自由与命运之间的关系。他的文学世界既有浪漫主义的热情，也孕育着俄罗斯现实主义。',
+    theory:'Творчество Пушкина — это художественное исследование свободы, человеческого достоинства и нравственного выбора в сложных отношениях личности, общества и истории.',
+    works:[{title:'叶甫盖尼·奥涅金',art:'/images/works/onegin.webp',artAlt:'塔季扬娜在夏日庄园窗边阅读书信',ru:'Евгений Онегин',idea:'“多余人”的悲剧',ideaRu:'Лишний человек', desc:'奥涅金拥有才华和社会地位，却无法在现实中找到自我定位，也错过了个人幸福。',quote:'В романе «Евгений Онегин» Пушкин раскрывает трагедию «лишнего человека», который не может найти своё место в обществе и обрести личное счастье.'},{title:'上尉的女儿',art:'/images/scenes/captain-2.webp',artAlt:'边境堡垒中格里尼奥夫与玛莎相遇的场景',ru:'Капитанская дочка',idea:'忠诚、荣誉与道德选择',ideaRu:'Верность, честь и нравственный выбор',desc:'格里尼奥夫在普加乔夫起义中经历爱情、危险和忠诚的考验；玛莎最终向女皇请求赦免。'}],
+    bg:'#eee4cd',ink:'#352c23',muted:'#766950',accent:'#b17b37',border:'#cbbd9e', number:'01'
+  },
+  {
+    slug:'gogol',name:'尼古拉·果戈里',ru:'Николай Гоголь',years:'1809—1852',era:'荒诞、讽刺与早期现实主义',image:'/images/gogol.webp',scene:'/images/gogol-scene.webp',
+    concept:'现实的荒诞与人的异化',conceptRu:'Абсурдность действительности и отчуждение человека',
+    intro:'果戈里把城市、官僚机构与人的虚荣转化为怪诞的文学剧场：日常生活令人发笑，却又使人不安。',theory:'В художественном мире Гоголя гротеск и сатира обнажают социальные пороки и духовную пустоту.',
+    works:[{title:'死魂灵',art:'/images/works/dead-souls.webp',artAlt:'十九世纪的彼得堡，马车与行人——以城市意象诠释果戈里的社会讽刺',ru:'Мёртвые души',idea:'精神僵死',ideaRu:'Духовное омертвение',desc:'通过奇奇科夫与地主群像，揭露贪婪、庸俗和道德麻木。',quote:'В поэме «Мёртвые души» Гоголь раскрывает проблему духовного омертвения человека, показывая, как жадность, пошлость и нравственная деградация разрушают человеческую личность.'},{title:'彼得堡故事集',art:'/images/works/petersburg-tales.webp',artAlt:'夜色中的彼得堡运河、煤灰色建筑与孤独的行人',ru:'Петербургские повести',idea:'荒诞世界中人的异化',ideaRu:'Отчуждение человека в абсурдном мире',desc:'通过《外套》《鼻子》《狂人日记》等作品，描绘等级制度与城市幻象中的小人物。',quote:'В «Петербургских повестях» Гоголь изображает мир, в котором социальная иерархия, бюрократия и власть внешних ценностей приводят к отчуждению человека, утрате его достоинства и разрушению личности.'}],
+    bg:'#2c3738',ink:'#eee6d5',muted:'#c0b9a8',accent:'#cfaa6e',border:'#586160',number:'02'
+  },
+  {
+    slug:'dostoevsky',name:'费奥多尔·陀思妥耶夫斯基',ru:'Фёдор Достоевский',years:'1821—1881',era:'心理现实主义与精神探索',image:'/images/dostoevsky.webp',scene:'/images/dostoevsky-scene.webp',
+    concept:'人的自由、罪责与信仰',conceptRu:'Свобода человека, вина и вера',intro:'在逼仄的城市和人物的内心独白中，陀思妥耶夫斯基追问理性、自我意志、罪与救赎的边界。',theory:'Достоевский раскрывает противоречия человеческой души через столкновение идей, нравственный выбор и внутренний конфликт.',
+    works:[{title:'罪与罚',art:'/images/works/crime-punishment.webp',artAlt:'烛光下拉斯柯尔尼科夫的狭窄房间',ru:'Преступление и наказание',idea:'心理现实主义',ideaRu:'Психологический реализм',desc:'拉斯柯尔尼科夫在犯罪后陷入罪责、恐惧与良心的冲突，开始艰难的精神转变。',quote:'В романе «Преступление и наказание» Достоевский исследует нравственные последствия преступления и показывает, что путь к духовному возрождению лежит через страдание, раскаяние и принятие ответственности.'},{title:'地下室手记',art:'/images/works/underground.webp',artAlt:'幽暗地下室的烛光、笔记和旧书',ru:'Записки из подполья',idea:'自由意志与人的非理性',ideaRu:'Свобода воли и иррациональность человека',desc:'“地下室人”反抗把人简化为理性公式的观念，展现自由意志与自我毁灭的矛盾。'},{title:'白痴',art:'/images/works/idiot.webp',artAlt:'夜色中等待的人影，诠释梅什金的孤独与道德理想',ru:'Идиот',idea:'道德理想的悲剧',ideaRu:'Трагедия нравственного идеала',desc:'梅什金公爵的善良与纯真碰撞自私、嫉妒和社会偏见，最终呈现道德理想的悲剧。'}],
+    bg:'#302725',ink:'#f1e5d2',muted:'#c5b3a4',accent:'#ca825c',border:'#66504a',number:'03'
+  },
+  {
+    slug:'tolstoy',name:'列夫·托尔斯泰',ru:'Лев Толстой',years:'1828—1910',era:'现实主义与伦理哲学',image:'/images/tolstoy.webp',scene:'/images/tolstoy-scene.webp',
+    concept:'现实主义与道德哲学',conceptRu:'Реализм и нравственная философия',intro:'托尔斯泰将家庭、个人选择与历史进程置于同一幅广阔画卷之中，不断追问生命的真正意义。',theory:'Реализм и нравственная философия — важнейшие основы художественного мира Толстого.',
+    works:[{title:'战争与和平',art:'/images/works/war-peace.webp',artAlt:'拿破仑战争时期的俄国战场',ru:'Война и мир',idea:'个人与历史',ideaRu:'Человек и история',desc:'从舞会和家庭生活到拿破仑战争，展示个体如何置身于宏大的历史洪流。',quote:'В романе-эпопее «Война и мир» Толстой исследует взаимосвязь личности и истории, показывая, что исторический процесс складывается из бесчисленных человеческих поступков, а подлинный смысл жизни раскрывается через любовь, семью и нравственное единение с людьми.'},{title:'安娜·卡列尼娜',art:'/images/works/anna-karenina.webp',artAlt:'帝俄上流社会华丽的舞会，映照婚姻与欲望的冲突',ru:'Анна Каренина',idea:'爱情、家庭与社会道德的冲突',ideaRu:'Конфликт любви, семьи и общественной морали',desc:'围绕安娜的爱情与命运，审视个人欲望、婚姻制度以及社会评判之间的冲突。'},{title:'复活',art:'/images/works/resurrection.webp',artAlt:'蜡烛、书籍与书桌，象征聂赫留朵夫的道德觉醒',ru:'Воскресение',idea:'道德重生',ideaRu:'Нравственное возрождение',desc:'聂赫留朵夫通过反省过往过错与目睹社会不公，踏上良心觉醒的道路。',quote:'В романе «Воскресение» Толстой изображает путь нравственного пробуждения человека через осознание собственной вины, сострадание и стремление исправить причинённое зло.'}],
+    bg:'#e9e5d7',ink:'#34413a',muted:'#627263',accent:'#849174',border:'#bcc3ac',number:'04'
+  },
+  {
+    slug:'chekhov',name:'安东·契诃夫',ru:'Антон Чехов',years:'1860—1904',era:'心理现实主义与新戏剧',image:'/images/chekhov.webp',scene:'/images/chekhov-scene.webp',
+    concept:'心理现实主义与新戏剧',conceptRu:'Психологический реализм и новая драма',intro:'契诃夫从日常对话、沉默与细微动作中揭示人物的渴望和失落；真正的变化往往发生在舞台之外。',theory:'Психологический реализм и новая драма Чехова раскрывают внутреннюю жизнь человека через подтекст, паузы и повседневные ситуации.',
+    works:[{title:'樱桃园',art:'/images/works/cherry-orchard.webp',artAlt:'开满花的樱桃园与将要失去的庄园',ru:'Вишнёвый сад',idea:'时间不可逆与失去的过去',ideaRu:'Необратимость времени и утрата прошлого',desc:'樱桃园既是美丽的故乡，也是即将消逝的旧时代：离别与历史变迁在平静中发生。',quote:'В пьесе «Вишнёвый сад» Чехов раскрывает трагикомическое противоречие между привязанностью человека к прошлому и неизбежностью исторических перемен. Вишнёвый сад становится символом уходящей эпохи и невозвратимого времени.'},{title:'海鸥',art:'/images/works/seagull.webp',artAlt:'傍晚的湖畔，天空映着戏剧性的霞光',ru:'Чайка',idea:'艺术理想与无法回应的爱情',ideaRu:'Художественный идеал и неразделённая любовь',desc:'人物对爱与艺术的渴望彼此交错，理想与现实始终存在距离。'},{title:'万尼亚舅舅',art:'/images/works/uncle-vanya.webp',artAlt:'庄园室内的茶具与鲜花，宁静中隐含人生的遗憾',ru:'Дядя Ваня',idea:'错过的人生与日常悲剧',ideaRu:'Упущенная жизнь и повседневная трагедия',desc:'被消耗的岁月、无法兑现的理想，以及日常劳作中的坚持。'},{title:'三姐妹',art:'/images/works/three-sisters.webp',artAlt:'花园里走向远处的身影，象征难以抵达的莫斯科',ru:'Три сестры',idea:'向往与停滞',ideaRu:'Мечта и жизненный застой',desc:'对莫斯科的向往成为一种永远延迟的希望，映照人物对生命意义的追寻。'}],
+    bg:'#ede6e1',ink:'#4f5751',muted:'#837d82',accent:'#ab7f94',border:'#cdbfc2',number:'05'
+  }
+];
+const storyboards = {"叶甫盖尼·奥涅金": [{"title": "厌倦上流社会的奥涅金", "ru": "Онегин устаёт от светской жизни", "image": "/images/scenes/onegin-1.webp", "study": false}, {"title": "塔季扬娜的爱情与告白", "ru": "Письмо Татьяны к Онегину", "image": "/images/scenes/onegin-2.webp", "study": false}, {"title": "决斗与连斯基之死", "ru": "Дуэль и гибель Ленского", "image": "/images/scenes/onegin-3.webp", "study": false}, {"title": "奥涅金离去，塔季扬娜逐渐成熟", "ru": "Отъезд Онегина и взросление Татьяны", "image": "/images/scenes/onegin-4.webp", "study": false}, {"title": "命运逆转：奥涅金爱上塔季扬娜", "ru": "Поздняя любовь Онегина", "image": "/images/scenes/onegin-5.webp", "study": false}], "上尉的女儿": [{"title": "离开家庭：格里尼奥夫踏上军旅之路", "ru": "Отъезд Гринёва из родного дома", "image": "/images/scenes/captain-1.webp", "study": false}, {"title": "边境堡垒中的爱情：格里尼奥夫与玛丽娅", "ru": "Любовь Гринёва и Марьи в крепости", "image": "/images/scenes/captain-2.webp", "study": false}, {"title": "普加乔夫起义：忠诚与死亡的抉择", "ru": "Восстание Пугачёва: выбор между верностью и смертью", "image": "/images/scenes/captain-3.webp", "study": false}, {"title": "营救玛莎：敌人与恩人的复杂关系", "ru": "Спасение Маши при содействии Пугачёва", "image": "/images/scenes/captain-4.webp", "study": false}, {"title": "命运逆转：玛莎请求女皇赦免", "ru": "Маша просит императрицу о помиловании", "image": "/images/scenes/captain-5.webp", "study": false}], "死魂灵": [{"title": "奇奇科夫抵达省城，展开交易计划", "ru": "Приезд Чичикова в губернский город", "image": "/images/scenes/souls-1.webp", "study": false}, {"title": "拜访地主，购买账册中的“死魂灵”", "ru": "Посещения помещиков и покупка «мёртвых душ»", "image": "/images/scenes/souls-2.webp", "study": false}, {"title": "社交宴会与流言四起", "ru": "Балы и распространение слухов", "image": "/images/scenes/souls-3.webp", "study": false}, {"title": "交易真相逼近，奇奇科夫仓皇离去", "ru": "Разоблачение и поспешный отъезд Чичикова", "image": "/images/scenes/souls-4.webp", "study": false}, {"title": "俄罗斯社会的精神僵死与讽刺", "ru": "Духовное омертвение и сатира на общество", "image": "/images/scenes/souls-5.webp", "study": false}], "罪与罚": [{"title": "拉斯柯尔尼科夫杀死放债老太婆", "ru": "Убийство старухи-процентщицы", "image": "/images/scenes/crime-1.webp", "study": false}, {"title": "罪后的恐惧、发热与精神崩溃", "ru": "Страх и душевный разлад после преступления", "image": "/images/scenes/crime-2.webp", "study": false}, {"title": "索尼娅的怜悯与福音", "ru": "Сострадание Сони и Евангелие", "image": "/images/scenes/crime-3.webp", "study": false}, {"title": "自首与西伯利亚服刑", "ru": "Признание и сибирская каторга", "image": "/images/scenes/crime-4.webp", "study": false}, {"title": "苦难中的精神复活", "ru": "Духовное возрождение через страдание", "image": "/images/scenes/crime-5.webp", "study": false}], "战争与和平": [{"title": "安娜·帕夫洛夫娜的沙龙：历史序幕", "ru": "Салон Анны Павловны — пролог истории", "image": "/images/scenes/war-1.webp", "study": false}, {"title": "娜塔莎的舞会与青春觉醒", "ru": "Первый бал Наташи Ростовой", "image": "/images/scenes/war-2.webp", "study": false}, {"title": "博罗季诺战役", "ru": "Бородинское сражение", "image": "/images/scenes/war-3.webp", "study": false}, {"title": "莫斯科大火与皮埃尔的精神转折", "ru": "Пожар Москвы и духовный перелом Пьера", "image": "/images/scenes/war-4.webp", "study": false}, {"title": "战后家庭与历史的归宿", "ru": "Семья и жизнь после войны", "image": "/images/scenes/war-5.webp", "study": false}], "樱桃园": [{"title": "拉涅夫斯卡娅回到故园", "ru": "Возвращение Раневской в усадьбу", "image": "/images/scenes/cherry-1.webp", "study": false}, {"title": "樱桃园盛放：旧时代的美与眷恋", "ru": "Цветение сада и память об уходящей эпохе", "image": "/images/scenes/cherry-2.webp", "study": false}, {"title": "拍卖：洛巴欣买下庄园", "ru": "Лопахин покупает имение на аукционе", "image": "/images/scenes/cherry-3.webp", "study": false}, {"title": "众人离去，庄园空寂", "ru": "Отъезд всех из опустевшего дома", "image": "/images/scenes/cherry-4.webp", "study": false}, {"title": "斧声响起，费尔斯被遗忘", "ru": "Стук топоров и забытый Фирс", "image": "/images/scenes/cherry-5.webp", "study": false}], "地下室手记": [{"title": "地下室人的自我剖析与孤独", "ru": "Исповедь и одиночество подпольного человека", "image": "/images/scenes/crime-1.webp", "study": true}, {"title": "与旧同学聚餐时的羞辱与争执", "ru": "Унижение на встрече бывших товарищей", "image": "/images/scenes/souls-2.webp", "study": true}, {"title": "与丽莎相遇后又伤害她", "ru": "Встреча с Лизой и её унижение", "image": "/images/scenes/onegin-3.webp", "study": true}], "白痴": [{"title": "梅什金公爵返回彼得堡", "ru": "Возвращение князя Мышкина в Петербург", "image": "/images/scenes/souls-1.webp", "study": true}, {"title": "娜斯塔西娅的生日晚宴", "ru": "Вечер у Настасьи Филипповны", "image": "/images/scenes/onegin-2.webp", "study": true}, {"title": "罗戈任的嫉妒与悲剧结局", "ru": "Ревность Рогожина и трагический финал", "image": "/images/scenes/crime-3.webp", "study": true}], "安娜·卡列尼娜": [{"title": "莫斯科舞会：安娜与渥伦斯基相遇", "ru": "Бал и встреча Анны с Вронским", "image": "/images/scenes/war-1.webp", "study": true}, {"title": "安娜与渥伦斯基的爱情和社会压力", "ru": "Любовь Анны и Вронского перед судом общества", "image": "/images/scenes/onegin-2.webp", "study": true}, {"title": "火车站：安娜命运的悲剧结局", "ru": "Трагический финал Анны на вокзале", "image": "/images/scenes/cherry-3.webp", "study": true}], "复活": [{"title": "法庭重逢：聂赫留朵夫认出玛丝洛娃", "ru": "Встреча Нехлюдова с Масловой в суде", "image": "/images/scenes/war-1.webp", "study": true}, {"title": "忏悔与试图弥补过去的罪责", "ru": "Раскаяние и попытка искупить вину", "image": "/images/scenes/crime-2.webp", "study": true}, {"title": "跟随流放者，追寻道德重生", "ru": "Следование за ссыльными и нравственное возрождение", "image": "/images/scenes/cherry-3.webp", "study": true}], "海鸥": [{"title": "特里波列夫在湖畔上演实验戏剧", "ru": "Спектакль Треплева у озера", "image": "/images/scenes/cherry-1.webp", "study": true}, {"title": "妮娜渴望成为演员", "ru": "Мечта Нины стать актрисой", "image": "/images/scenes/onegin-2.webp", "study": true}, {"title": "理想幻灭后仍坚持艺术", "ru": "Утрата иллюзий и верность искусству", "image": "/images/scenes/crime-3.webp", "study": true}], "万尼亚舅舅": [{"title": "教授夫妇回乡，庄园秩序被打乱", "ru": "Приезд профессора в имение", "image": "/images/scenes/cherry-1.webp", "study": true}, {"title": "万尼亚向教授开枪未遂", "ru": "Неудачный выстрел Войницкого", "image": "/images/scenes/crime-2.webp", "study": true}, {"title": "索尼娅与万尼亚重返劳作", "ru": "Соня и Ваня возвращаются к труду", "image": "/images/scenes/war-3.webp", "study": true}], "三姐妹": [{"title": "三姐妹回忆莫斯科，期待新生活", "ru": "Сёстры мечтают о Москве", "image": "/images/scenes/cherry-1.webp", "study": true}, {"title": "军官离去，爱情和理想破灭", "ru": "Отъезд военных и крушение надежд", "image": "/images/scenes/onegin-2.webp", "study": true}, {"title": "在失落中继续生活", "ru": "Продолжение жизни вопреки утратам", "image": "/images/scenes/war-3.webp", "study": true}], "彼得堡故事集": [{"title": "《外套》：阿卡基得到新外套却遭抢劫", "ru": "«Шинель»: похищение новой шинели Акакия", "image": "/images/scenes/souls-1.webp", "study": true}, {"title": "《鼻子》：科瓦廖夫寻找失踪的鼻子", "ru": "«Нос»: Ковалёв ищет пропавший нос", "image": "/images/scenes/souls-2.webp", "study": true}, {"title": "《涅瓦大街》：街头幻象与理想破灭", "ru": "«Невский проспект»: обманчивые видения", "image": "/images/scenes/souls-3.webp", "study": true}, {"title": "《狂人日记》：波普里希钦陷入妄想", "ru": "«Записки сумасшедшего»: безумие Поприщина", "image": "/images/scenes/crime-4.webp", "study": true}]};
+---
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#eee4cd" />
+  <meta name="description" content="以绘画、光线与中俄双语，阅读俄罗斯文学史。普希金、果戈里、陀思妥耶夫斯基、托尔斯泰与契诃夫。" />
+  <title>俄罗斯文学的流动画廊</title>
+
+  <style is:global>
+    :root{font-family:'FangSong','仿宋','STFangsong','华文仿宋',serif;background:#eee4cd;color:#352c23;font-synthesis:none}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;--bg:#eee4cd;--ink:#352c23;--muted:#766950;--accent:#b17b37;--line:#cbbd9e;background:var(--bg);color:var(--ink);transition:background 1s ease,color 1s ease;overflow-x:hidden}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}button{font:inherit}::selection{background:var(--accent);color:var(--bg)}
+    body::after{content:'';position:fixed;inset:0;pointer-events:none;opacity:.09;z-index:20;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.23' filter='url(%23n)'/%3E%3C/svg%3E")}
+    .site-header{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:25px clamp(22px,5vw,86px);position:relative;z-index:3}.brand{font:500 28px/1.08 'FangSong','STFangsong',serif;letter-spacing:-1.5px;display:block}.brand small{display:block;font:400 9px/1.4 Arial,sans-serif;letter-spacing:2px;margin-top:10px;text-transform:uppercase}.nav{display:flex;gap:31px;font-size:12px;letter-spacing:2px}.nav a{opacity:.75;transition:opacity .25s}.nav a:hover{opacity:1}.language{font:11px Georgia,serif;border:1px solid var(--line);border-radius:99px;padding:9px 11px;letter-spacing:1px}
+    .eyebrow{font:500 10px/1.8 Arial,sans-serif;letter-spacing:3.2px;text-transform:uppercase}.hero-intro{text-align:center;padding:28px 20px 12px}.hero-intro h1{font-weight:400;font-size:clamp(35px,5vw,77px);letter-spacing:2px;line-height:1.24;margin:14px auto}.hero-intro p{font-size:13px;line-height:2.2;color:var(--muted);margin:0}.hero-intro .ru-sub{font-size:12px;letter-spacing:1px;margin-top:9px}
+    .theater{position:relative;max-width:1440px;margin:0 auto;padding:22px 0 10px;min-height:480px}.theater:before{content:'';position:absolute;left:7%;right:7%;bottom:7%;height:48px;background:var(--accent);opacity:.08;filter:blur(38px);border-radius:50%}.carousel{height:450px;position:relative;perspective:1300px;transform-style:preserve-3d;overflow:hidden}.art-card{position:absolute;left:50%;top:12px;width:clamp(220px,29vw,378px);height:415px;border:0;padding:0;background:#181818;cursor:pointer;box-shadow:0 24px 60px #0005;transform:translateX(-50%) translateX(calc(var(--offset) * 82%)) translateZ(calc(var(--abs) * -130px)) rotateY(calc(var(--offset) * -30deg)) scale(calc(1 - var(--abs) * .06));z-index:calc(10 - var(--abs));opacity:var(--visibility);filter:brightness(calc(1 - var(--abs) * .16));transition:transform .8s cubic-bezier(.22,.72,.1,1),opacity .6s,filter .6s,box-shadow .6s;overflow:hidden}.art-card:focus-visible{outline:3px solid var(--accent);outline-offset:5px}.art-card[aria-current="true"]{box-shadow:0 28px 70px #0006;cursor:default}.art-card img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform:scale(1.05);transition:transform 1s}.art-card[aria-current="true"] img{transform:scale(1)}.art-card:after{content:'';position:absolute;inset:30% 0 0;background:linear-gradient(transparent,#15120eaa)}.card-title{position:absolute;z-index:2;bottom:24px;left:24px;right:24px;color:#fff6e9;text-align:left;text-shadow:0 2px 9px #0006}.card-title small{font:11px Arial,sans-serif;letter-spacing:2px}.card-title strong{display:block;font-size:23px;font-weight:500;margin-top:7px}.card-title em{display:block;font:italic 21px 'Cormorant Garamond',Georgia,serif;margin-top:3px}
+    .carousel-control{display:flex;align-items:center;justify-content:center;gap:22px;margin:10px 0 23px}.arrow{border:1px solid var(--line);width:45px;height:45px;border-radius:50%;background:transparent;color:var(--ink);font-size:23px;cursor:pointer;transition:background .3s,color .3s}.arrow:hover{background:var(--ink);color:var(--bg)}.current-counter{min-width:92px;text-align:center;font:15px 'Cormorant Garamond',Georgia,serif;letter-spacing:4px}.progress{display:flex;justify-content:center;gap:11px}.dot{width:30px;height:3px;background:var(--line);border:0;padding:0;cursor:pointer;transition:background .4s,width .4s}.dot.active{background:var(--accent);width:52px}
+    .detail-wrap{max-width:1250px;margin:55px auto 0;padding:0 32px 100px}.author-panel{display:none;animation:slideIn .65s both}.author-panel.active{display:block}@keyframes slideIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}.panel-head{display:grid;grid-template-columns:1.2fr 1fr;gap:8vw;align-items:end;padding:40px 0 42px;border-top:1px solid var(--line)}.num{font:italic 90px/.75 'Cormorant Garamond',Georgia,serif;color:var(--accent);opacity:.85}.author-title{font-weight:500;font-size:clamp(29px,3vw,49px);line-height:1.45;margin:12px 0 4px}.ru-name{font:italic clamp(22px,2.4vw,36px) 'Cormorant Garamond',Georgia,serif;margin:0 0 20px}.years{font:12px Arial,sans-serif;letter-spacing:2px;color:var(--muted)}.panel-lede{font-size:15px;line-height:2.5;margin:12px 0 15px}.theory{font-size:13px;line-height:2.2;color:var(--muted);font-style:italic;margin:0;overflow-wrap:anywhere}.section-marker{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:24px}.section-marker span:last-child{color:var(--muted)}
+    .concept{padding:25px 0 35px;max-width:990px}.concept .zh{font-size:clamp(22px,2.8vw,39px);font-weight:400;margin:10px 0 5px}.concept .ru{font-size:clamp(16px,1.7vw,24px);color:var(--accent);margin:0;line-height:1.7}.work-row{display:grid;grid-template-columns:minmax(210px,1fr) minmax(190px,.9fr) minmax(250px,1.1fr);gap:clamp(22px,3vw,48px);border-top:1px solid var(--line);padding:38px 0}.work-art{margin:0;min-width:0;align-self:start}.work-art img{display:block;width:100%;height:auto;aspect-ratio:5/3;object-fit:cover;border:1px solid var(--line);filter:saturate(.9);transition:filter .4s,transform .4s}.work-art img:hover{filter:saturate(1.13)}.work-art figcaption{display:flex;justify-content:space-between;gap:8px;font-size:11px;color:var(--muted);padding-top:10px}.work-count{font:11px Arial,sans-serif;letter-spacing:2px;color:var(--accent)}.work-title{font-size:clamp(23px,2.6vw,37px);font-weight:500;margin:12px 0 3px}.work-ru{font-size:17px;font-style:italic;margin:0;color:var(--muted);line-height:1.7}.work-label{font-size:12px;margin:17px 0 3px;color:var(--muted)}.work-idea{font-size:17px;margin:0}.work-idea-ru{display:block;color:var(--accent);font-size:16px;margin-top:6px;line-height:1.7}.work-desc{font-size:14px;line-height:2.2;margin:0 0 15px}.work-quote{font-size:14px;line-height:2.25;margin:0;color:var(--muted);overflow-wrap:anywhere;border-left:2px solid var(--accent);padding-left:22px}.scene-band{position:relative;overflow:hidden;max-height:420px;margin-top:30px}.scene-band img{width:100%;height:360px;object-fit:cover;display:block;filter:saturate(.87)}.scene-band span{position:absolute;left:24px;bottom:24px;background:#f3eadacb;color:#302b28;font:11px Arial,sans-serif;letter-spacing:2px;padding:11px 15px}.site-footer{border-top:1px solid var(--line);max-width:1250px;padding:30px 32px 55px;margin:auto;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:12px;line-height:1.9}.closing{font:italic 26px 'Times New Roman',serif;color:var(--ink);margin:0}
+    @media(max-width:950px){.work-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.work-row>div:last-child{grid-column:2}.work-art{grid-row:1 / span 2;align-self:start}}@media(max-width:700px){.site-header{padding:20px}.nav{gap:12px;font-size:10px;letter-spacing:0}.nav a:nth-child(2){display:none}.language{display:none}.brand{font-size:25px}.hero-intro{padding-top:25px}.hero-intro h1{font-size:35px}.theater{min-height:390px}.carousel{height:365px}.art-card{width:235px;height:335px;top:10px;transform:translateX(-50%) translateX(calc(var(--offset) * 64%)) translateZ(calc(var(--abs) * -180px)) rotateY(calc(var(--offset) * -34deg)) scale(calc(1 - var(--abs) * .12))}.card-title{left:16px;bottom:17px}.card-title strong{font-size:20px}.carousel-control{margin:0 0 20px}.detail-wrap{margin:10px auto 0;padding:0 23px 55px}.panel-head{grid-template-columns:1fr;gap:25px;padding:25px 0}.num{font-size:68px}.panel-lede{line-height:2.1}.work-row{grid-template-columns:1fr;gap:18px;padding:26px 0}.work-row>div:last-child{grid-column:auto}.work-art{grid-row:auto}.work-quote{padding-left:12px}.scene-band img{height:235px}.site-footer{padding:25px 22px 50px;flex-direction:column}.section-marker{font-size:11px}.theory{font-size:12px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+    [lang="ru"],.ru-name,.work-ru,.ru-sub,.work-idea-ru,.brand small{font-family:'Times New Roman',Times,serif!important}
+    .art-card img{animation:galleryBreathe 15s ease-in-out infinite alternate;transform-origin:50% 52%}
+    .art-card:not([aria-current="true"]) img{animation-play-state:paused}
+    @keyframes galleryBreathe{from{transform:scale(1)}to{transform:scale(1.055) translateY(-.5%)}}
+    .author-panel.active{animation:galleryEnter .75s cubic-bezier(.16,1,.3,1) both}
+    @keyframes galleryEnter{from{opacity:0;transform:translateY(17px)}to{opacity:1;transform:translateY(0)}}
+    .narrative-gallery{margin:5px 0 50px;border-top:1px solid var(--line);padding-top:27px}
+    .narrative-topline{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;color:var(--muted);margin-bottom:20px;letter-spacing:.08em}
+    .narrative-stage{position:relative;overflow:hidden;background:#201d1a;aspect-ratio:16/8.2;max-height:510px}
+    .narrative-stage img{width:100%;height:100%;object-fit:cover;display:block;animation:sceneDrift 13s ease-in-out infinite alternate;filter:saturate(.89)}
+    .narrative-stage::before{content:'';position:absolute;z-index:1;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 48%,rgba(0,0,0,.65))}
+    .narrative-stage::after{content:'';position:absolute;z-index:1;inset:-25%;pointer-events:none;background:linear-gradient(115deg,transparent 38%,rgba(255,228,175,.065) 52%,transparent 65%);animation:lightShift 16s ease-in-out infinite alternate}
+    @keyframes sceneDrift{from{transform:scale(1.01) translateX(-.5%)}to{transform:scale(1.065) translateX(.5%)}}
+    @keyframes lightShift{from{transform:translateX(-10%)}to{transform:translateX(10%)}}
+    .narrative-stage img.refresh{animation:paintingReveal .8s cubic-bezier(.2,.8,.2,1) both,sceneDrift 13s ease-in-out .8s infinite alternate}
+    @keyframes paintingReveal{from{opacity:.25;filter:blur(9px) saturate(.65);transform:scale(1.035)}to{opacity:1;filter:blur(0) saturate(.89);transform:scale(1.01)}}
+    .narrative-caption{position:absolute;left:clamp(16px,3vw,32px);bottom:24px;right:120px;z-index:2;color:#fff6e9;text-shadow:0 2px 10px #0007}
+    .narrative-caption h4{font-size:clamp(17px,2.3vw,28px);font-weight:500;margin:4px 0}.narrative-caption p{font-family:'Times New Roman',Times,serif;font-size:clamp(14px,1.5vw,18px);margin:0}
+    .narrative-arrows{position:absolute;z-index:3;right:20px;bottom:25px;display:flex;gap:8px}
+    .narrative-arrows button{width:38px;height:38px;border:1px solid #fff9;color:white;border-radius:50%;background:#251f1d68;cursor:pointer;transition:background .3s,transform .3s}.narrative-arrows button:hover{background:#251f1dd9;transform:scale(1.05)}
+    .narrative-thumbs{display:grid;grid-template-columns:repeat(var(--count),minmax(0,1fr));gap:12px;margin-top:15px}
+    .narrative-thumb{padding:0;border:1px solid transparent;background:transparent;color:inherit;text-align:left;cursor:pointer;min-width:0;opacity:.68;transition:opacity .45s,border-color .45s,transform .45s}
+    .narrative-thumb:hover,.narrative-thumb.is-selected{opacity:1}.narrative-thumb.is-selected{border-color:var(--accent);transform:translateY(-4px)}
+    .narrative-thumb img{width:100%;aspect-ratio:1.5;object-fit:cover;display:block}.narrative-thumb span{font-size:clamp(11px,1vw,13px);display:block;line-height:1.65;padding:8px 7px 0}.narrative-thumb small{font-family:'Times New Roman',Times,serif;color:var(--muted);display:block;line-height:1.5;padding:1px 7px 9px;font-size:11px}
+    .narrative-note{font-size:11px;color:var(--muted);line-height:1.8;margin:13px 0 0}
+    @media(max-width:700px){.narrative-stage{aspect-ratio:4/3}.narrative-thumbs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:10px}.narrative-thumb{min-width:155px;width:155px;scroll-snap-align:center}.narrative-caption{right:90px}.narrative-arrows{right:12px;bottom:16px}.narrative-arrows button{width:32px;height:32px}.narrative-caption{bottom:15px}.brand{font-size:20px}}
+    @media(prefers-reduced-motion:reduce){.art-card img,.narrative-stage img,.narrative-stage::after{animation:none!important}.narrative-thumb{transform:none!important}}
+  
+    body::before{content:'';position:fixed;inset:-10%;pointer-events:none;z-index:1;opacity:.24;background:radial-gradient(circle at 20% 10%, color-mix(in srgb,var(--accent) 18%, transparent), transparent 36%),radial-gradient(circle at 82% 24%, color-mix(in srgb,var(--accent) 12%, transparent), transparent 32%),radial-gradient(circle at 50% 90%, color-mix(in srgb,var(--line) 25%, transparent), transparent 42%);animation:ambientFlow 22s ease-in-out infinite alternate}
+    @keyframes ambientFlow{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(0,-1.2%,0) scale(1.04)}}
+    .site-header,.hero-intro,.theater,.detail-wrap,.site-footer{position:relative;z-index:2}
+    .hero-intro h1,.hero-intro p,.hero-intro .eyebrow{animation:softReveal .9s both}
+    .hero-intro p{animation-delay:.12s}.hero-intro .ru-sub{animation-delay:.18s}
+    @keyframes softReveal{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+    .theater{scroll-margin-top:30px}
+    .carousel{mask-image:linear-gradient(90deg,transparent,black 8%,black 92%,transparent)}
+    .art-card[aria-current="true"]{animation:cardFloat 8s ease-in-out infinite alternate}
+    @keyframes cardFloat{from{transform:translateX(-50%) translateX(calc(var(--offset) * 82%)) translateZ(calc(var(--abs) * -130px)) rotateY(calc(var(--offset) * -30deg)) scale(calc(1 - var(--abs) * .06)) translateY(0)}to{transform:translateX(-50%) translateX(calc(var(--offset) * 82%)) translateZ(calc(var(--abs) * -130px)) rotateY(calc(var(--offset) * -30deg)) scale(calc(1 - var(--abs) * .06)) translateY(-6px)}}
+    .work-art img{animation:artFloat 15s ease-in-out infinite alternate;transform-origin:50% 50%}
+    .scene-band{border:1px solid var(--line)}
+    .scene-band img{animation:panSlow 20s ease-in-out infinite alternate;transform-origin:50% 50%}
+    @keyframes panSlow{from{transform:scale(1.02) translateX(0)}to{transform:scale(1.08) translateX(-1.5%)}}
+    .narrative-gallery{position:relative}
+    .narrative-stage{border:1px solid var(--line);box-shadow:0 20px 60px color-mix(in srgb,var(--ink) 12%, transparent)}
+    .narrative-stage::before{content:'';position:absolute;inset:-10%;z-index:1;pointer-events:none;background:linear-gradient(115deg,transparent 20%,rgba(255,248,233,.08) 37%,rgba(255,236,190,.2) 48%,rgba(255,248,233,.08) 61%,transparent 78%);transform:translateX(-22%) rotate(2deg);animation:lightSweep 18s ease-in-out infinite}
+    .narrative-stage::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle at 75% 20%, rgba(255,255,255,.18), transparent 22%),linear-gradient(to top, rgba(18,12,9,.34), transparent 40%);mix-blend-mode:screen;opacity:.75}
+    @keyframes lightSweep{0%,100%{transform:translateX(-24%) rotate(2deg)}50%{transform:translateX(18%) rotate(2deg)}}
+    .narrative-image{position:relative;z-index:0;animation:sceneDrift 18s ease-in-out infinite alternate;transform-origin:50% 50%;will-change:transform,filter}
+    @keyframes sceneDrift{from{transform:scale(1) translate3d(0,0,0);filter:saturate(.96) brightness(.98)}to{transform:scale(1.06) translate3d(-1%,-.6%,0);filter:saturate(1.06) brightness(1.02)}}
+    .narrative-image.refresh{animation:storySwap .55s cubic-bezier(.2,.8,.2,1),sceneDrift 18s .56s ease-in-out infinite alternate}
+    @keyframes storySwap{from{opacity:.15;transform:scale(1.035);filter:blur(6px) brightness(1.04)}to{opacity:1;transform:scale(1);filter:blur(0) brightness(1)}}
+    .narrative-caption{backdrop-filter:blur(8px);background:linear-gradient(180deg,rgba(20,14,10,.02),rgba(20,14,10,.35));}
+    .narrative-thumbs{scroll-behavior:smooth}
+    .narrative-thumb{transition:transform .35s ease,opacity .35s ease,border-color .35s ease,box-shadow .35s ease}
+    .narrative-thumb:hover,.narrative-thumb.is-selected{transform:translateY(-3px);box-shadow:0 12px 30px color-mix(in srgb,var(--ink) 14%, transparent)}
+    .narrative-thumb img{transition:transform .5s ease,filter .5s ease}
+    .narrative-thumb:hover img,.narrative-thumb.is-selected img{transform:scale(1.05);filter:saturate(1.05)}
+    .narrative-gallery[data-auto="on"] .story-progress::after{content:' · 自动播放';opacity:.72}
+    .author-panel{scroll-margin-top:44px}
+    @media(max-width:700px){.narrative-stage{aspect-ratio:4/3;max-height:none}.narrative-stage::before{animation-duration:14s}.art-card[aria-current="true"]{animation:none}.work-art img,.scene-band img,.narrative-image{animation-duration:12s}}
+    @media(prefers-reduced-motion:reduce){body::before,.hero-intro h1,.hero-intro p,.hero-intro .eyebrow,.art-card[aria-current="true"],.work-art img,.scene-band img,.narrative-image,.narrative-stage::before{animation:none!important}.narrative-thumbs{scroll-behavior:auto}}
+
+  
+    .effect-layer{position:absolute;inset:-8%;pointer-events:none;z-index:1;opacity:0;transition:opacity .6s ease;overflow:hidden}
+    .effect-layer::before,.effect-layer::after{content:'';position:absolute;inset:-20%;pointer-events:none}
+    .narrative-stage[data-effect]{--fx-opacity:1}
+    .narrative-stage[data-effect~="glow"] .effect-a{opacity:.82}
+    .narrative-stage[data-effect~="glow"] .effect-a::before{background:radial-gradient(circle at 22% 24%, rgba(255,221,167,.28), transparent 19%),radial-gradient(circle at 78% 18%, rgba(255,215,145,.18), transparent 17%),linear-gradient(to top, rgba(255,205,120,.08), transparent 40%);animation:flickerGlow 3.4s ease-in-out infinite alternate}
+    .narrative-stage[data-effect~="sparkle"] .effect-b{opacity:.7}
+    .narrative-stage[data-effect~="sparkle"] .effect-b::before{background-image:radial-gradient(circle, rgba(255,245,220,.9) 0 1px, transparent 1.4px);background-size:95px 95px;animation:sparkleMove 12s linear infinite}
+    .narrative-stage[data-effect~="snow"] .effect-a{opacity:.88}
+    .narrative-stage[data-effect~="snow"] .effect-a::before,.narrative-stage[data-effect~="snow"] .effect-a::after{background-image:radial-gradient(circle, rgba(255,255,255,.95) 0 1px, transparent 1.7px),radial-gradient(circle, rgba(255,255,255,.85) 0 1.6px, transparent 2.2px),radial-gradient(circle, rgba(255,255,255,.75) 0 2px, transparent 2.7px);background-size:120px 120px,180px 180px,240px 240px;background-position:0 0,40px 40px,90px 20px;animation:snowFall 15s linear infinite}
+    .narrative-stage[data-effect~="snow"] .effect-a::after{animation-duration:22s;opacity:.7;filter:blur(.4px)}
+    .narrative-stage[data-effect~="petals"] .effect-a{opacity:.85}
+    .narrative-stage[data-effect~="petals"] .effect-a::before,.narrative-stage[data-effect~="petals"] .effect-a::after{background-image:radial-gradient(ellipse at center, rgba(255,219,229,.96) 0 45%, rgba(255,173,201,.9) 46% 60%, transparent 61%);background-size:26px 18px;background-repeat:repeat;animation:petalFall 18s linear infinite;transform:rotate(-8deg)}
+    .narrative-stage[data-effect~="petals"] .effect-a::after{animation-duration:26s;opacity:.6;filter:blur(.35px);transform:rotate(8deg)}
+    .narrative-stage[data-effect~="fog"] .effect-b{opacity:.65;mix-blend-mode:screen}
+    .narrative-stage[data-effect~="fog"] .effect-b::before{background:radial-gradient(circle at 12% 72%, rgba(235,238,244,.42), transparent 18%),radial-gradient(circle at 44% 78%, rgba(235,238,244,.4), transparent 23%),radial-gradient(circle at 80% 66%, rgba(235,238,244,.35), transparent 20%);filter:blur(10px);animation:fogDrift 17s ease-in-out infinite alternate}
+    .narrative-stage[data-effect~="smoke"] .effect-b{opacity:.72}
+    .narrative-stage[data-effect~="smoke"] .effect-b::after{background:radial-gradient(circle at 18% 70%, rgba(82,68,59,.22), transparent 18%),radial-gradient(circle at 54% 76%, rgba(70,57,51,.28), transparent 22%),radial-gradient(circle at 78% 58%, rgba(105,86,70,.18), transparent 20%);filter:blur(14px);animation:smokeLift 14s ease-in-out infinite alternate}
+    .narrative-stage[data-effect~="embers"] .effect-a{opacity:.95}
+    .narrative-stage[data-effect~="embers"] .effect-a::after{background-image:radial-gradient(circle, rgba(255,194,107,.95) 0 1.4px, transparent 1.8px),radial-gradient(circle, rgba(255,120,69,.88) 0 2.2px, transparent 2.8px);background-size:130px 130px,210px 210px;animation:embersRise 13s linear infinite}
+    .narrative-stage[data-effect~="water"] .effect-b{opacity:.4;mix-blend-mode:screen}
+    .narrative-stage[data-effect~="water"] .effect-b::before{inset:auto -10% 0 -10%;height:45%;background:repeating-linear-gradient(175deg, rgba(255,255,255,.18) 0 2px, rgba(255,255,255,0) 3px 13px),linear-gradient(to top, rgba(130,171,211,.14), transparent 40%);animation:waterShimmer 6s ease-in-out infinite}
+    .narrative-stage[data-effect~="rain"] .effect-a{opacity:.5}
+    .narrative-stage[data-effect~="rain"] .effect-a::before{background:repeating-linear-gradient(104deg, rgba(218,226,236,.0) 0 16px, rgba(218,226,236,.35) 16px 18px, rgba(218,226,236,.0) 18px 34px);animation:rainSweep 1.4s linear infinite}
+    @keyframes flickerGlow{0%{opacity:.75;transform:scale(1)}50%{opacity:.95;transform:scale(1.015)}100%{opacity:.82;transform:scale(1.03)}}
+    @keyframes sparkleMove{from{transform:translate3d(0,0,0)}to{transform:translate3d(-3%,4%,0)}}
+    @keyframes snowFall{from{transform:translate3d(0,-8%,0)}to{transform:translate3d(-2%,16%,0)}}
+    @keyframes petalFall{from{transform:translate3d(0,-10%,0) rotate(-8deg)}to{transform:translate3d(3%,18%,0) rotate(14deg)}}
+    @keyframes fogDrift{from{transform:translate3d(-2%,0,0)}to{transform:translate3d(3%,-2%,0)}}
+    @keyframes smokeLift{from{transform:translate3d(0,6%,0) scale(1)}to{transform:translate3d(2%,-6%,0) scale(1.06)}}
+    @keyframes embersRise{from{transform:translate3d(0,10%,0)}to{transform:translate3d(1%,-12%,0)}}
+    @keyframes waterShimmer{0%,100%{transform:translateX(0) scaleY(1)}50%{transform:translateX(-1.5%) scaleY(1.03)}}
+    @keyframes rainSweep{from{transform:translateY(-4%)}to{transform:translateY(8%)}}
+    @media(prefers-reduced-motion:reduce){.effect-layer,.effect-layer::before,.effect-layer::after{animation:none!important;display:none!important}}
+
+  </style>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a href="#top" class="brand" aria-label="俄罗斯文学流动画廊，回到首页">俄罗斯文学的流动画廊<small>Галерея русской литературы</small></a>
+    <nav class="nav" aria-label="网站导航"><a href="#authors">作家</a><a href="#details">文学概念</a><a href="#details">作品</a><a href="#about">关于</a></nav>
+    <span class="language" aria-label="中文及俄语">中 / РУ</span>
+  </header>
+  <main>
+    <section class="hero-intro" aria-labelledby="title">
+      <div class="eyebrow">文字与风景 · Слово и пейзаж</div>
+      <h1 id="title">俄罗斯文学的流动画廊</h1>
+      <p>五位作家，五种光线。在绘画与文学之间，遇见俄罗斯文学的灵魂。</p>
+      <p class="ru-sub" lang="ru">Пять писателей. Пять оттенков света. Одно путешествие по русской литературе.</p>
+    </section>
+    <section class="theater" id="authors" aria-label="按出生年份排列的作家画廊">
+      <div class="carousel" id="carousel">
+        {authors.map((author,i)=><button type="button" class="art-card" data-index={i} aria-label={`查看${author.name}，${author.years}`} aria-current={i===0?'true':'false'} style={`--offset:${i};--abs:${i};--visibility:${i>2?0:1}`}><img src={author.image} alt={`${author.name}代表作品的后印象派风格画面`} loading={i===0?'eager':'lazy'}/><span class="card-title"><small>{author.number} / {author.years}</small><strong>{author.name}</strong><em lang="ru">{author.ru}</em></span></button>)}
+      </div>
+      <div class="carousel-control"><button class="arrow" id="prev" type="button" aria-label="上一位作家">←</button><div class="current-counter" aria-live="polite"><span id="current-index">01</span> / 05</div><button class="arrow" id="next" type="button" aria-label="下一位作家">→</button></div>
+      <div class="progress" aria-label="选择作家">{authors.map((author,i)=><button type="button" class:list={['dot',{active:i===0}]} data-go={i} aria-label={`切换到${author.name}`}></button>)}</div>
+    </section>
+    <section class="detail-wrap" id="details" aria-label="作家作品与文学概念">
+      {authors.map((author,i)=><article class:list={['author-panel',{active:i===0}]} data-panel={i} id={author.slug} aria-hidden={i===0?'false':'true'}>
+        <div class="panel-head"><div><div class="num">{author.number}</div><h2 class="author-title">{author.name}</h2><p class="ru-name" lang="ru">{author.ru}</p><p class="years">{author.years} / {author.era}</p></div><div><div class="eyebrow">文学世界 · Литературный мир</div><p class="panel-lede">{author.intro}</p><p class="theory" lang="ru">{author.theory}</p></div></div>
+        <div class="section-marker"><span class="eyebrow">核心文学概念 · Ключевая литературная идея</span><span class="eyebrow">{author.number} / 05</span></div>
+        <div class="concept"><h3 class="zh">{author.concept}</h3><p class="ru" lang="ru">{author.conceptRu}</p></div>
+        <div class="section-marker"><span class="eyebrow">代表作品 · Основные произведения</span><span class="eyebrow">{String(author.works.length).padStart(2,'0')} 篇 / 部</span></div>
+        {author.works.map((work,j)=><div class="work-chapter"><div class="work-row"><figure class="work-art"><img src={work.art} alt={work.artAlt} loading="lazy" decoding="async" width="1200" height="720"/><figcaption>绘画场景 · Живописная сцена <span>{String(j+1).padStart(2,'0')}</span></figcaption></figure><div><span class="work-count">作品 {String(j+1).padStart(2,'0')}</span><h3 class="work-title">《{work.title}》</h3><p class="work-ru" lang="ru">«{work.ru}»</p><p class="work-label">核心概念 · Основная идея</p><p class="work-idea">{work.idea}<span class="work-idea-ru" lang="ru">{work.ideaRu}</span></p></div><div><p class="work-desc">{work.desc}</p>{work.quote&&<blockquote class="work-quote" lang="ru">{work.quote}</blockquote>}</div></div>
+        <section class="narrative-gallery" aria-label={`《${work.title}》主要情节画廊`} data-story={work.title}>
+          <div class="narrative-topline"><span>情节绘画 · Сюжеты в живописи</span><span class="story-progress" aria-live="polite">01 / {String(storyboards[work.title]?.length || 1).padStart(2,'0')}</span></div>
+          <div class="narrative-stage">
+            <img class="narrative-image" src={storyboards[work.title]?.[0]?.image || work.art} alt={storyboards[work.title]?.[0]?.title || work.artAlt} loading="lazy" decoding="async" width="1000" height="650" />
+            <div class="effect-layer effect-a" aria-hidden="true"></div><div class="effect-layer effect-b" aria-hidden="true"></div>
+            <div class="narrative-caption"><h4 class="narrative-zh">{storyboards[work.title]?.[0]?.title}</h4><p class="narrative-ru" lang="ru">{storyboards[work.title]?.[0]?.ru}</p></div>
+            <div class="narrative-arrows"><button type="button" class="story-prev" aria-label="上一幅情节画">←</button><button type="button" class="story-next" aria-label="下一幅情节画">→</button></div>
+          </div>
+          <div class="narrative-thumbs" style={`--count:${storyboards[work.title]?.length||1}`}>
+            {storyboards[work.title]?.map((scene,k)=><button type="button" class:list={['narrative-thumb',{'is-selected':k===0}]} data-scene={k} aria-pressed={k===0?'true':'false'}><img src={scene.image} alt={scene.title} loading="lazy" width="1000" height="650" /><span>{String(k+1).padStart(2,'0')} · {scene.title}</span><small lang="ru">{scene.ru}</small></button>)}
+          </div>
+          {storyboards[work.title]?.some(x=>x.study)&&<p class="narrative-note">部分次要作品现使用风格统一的画面习作，情节画面尚待逐幅精绘；标题与情节依据原著编排。</p>}
+        </section></div>)}
+        <div class="scene-band"><img src={author.scene} alt={`${author.name}的后印象派风格文学场景`} loading="lazy"/><span>文学与绘画 · Литература и живопись / {author.number}</span></div>
+      </article>)}
+    </section>
+  </main>
+  <footer class="site-footer" id="about"><div><p class="closing">俄罗斯文学的流动画廊 · Галерея русской литературы</p><span>一座以中俄双语讲述文学、以绘画感受文学的数字图鉴。</span></div><div>章节按作家出生年份排序，并非严格的文学流派分期。<br/>主要作品按情节展示独立画面；部分其他作品仍使用构图习作，需要继续精绘。俄语论述为文学解读，非作品原文引文。<br/>© 2026 · 独立非商业艺术项目</div></footer>
+  <script is:inline>
+    (() => {
+      const themes = [
+        ['#eee4cd','#352c23','#766950','#b17b37','#cbbd9e'],
+        ['#2c3738','#eee6d5','#c0b9a8','#cfaa6e','#586160'],
+        ['#302725','#f1e5d2','#c5b3a4','#ca825c','#66504a'],
+        ['#e9e5d7','#34413a','#627263','#849174','#bcc3ac'],
+        ['#ede6e1','#4f5751','#837d82','#ab7f94','#cdbfc2']
+      ];
+      const cards=[...document.querySelectorAll('.art-card')];
+      const dots=[...document.querySelectorAll('.dot')];
+      const panels=[...document.querySelectorAll('.author-panel')];
+      const counter=document.getElementById('current-index');
+      const carousel=document.getElementById('carousel');
+      let current=0;
+      function select(index){
+        current=Math.max(0,Math.min(cards.length-1,index));
+        const vars=['--bg','--ink','--muted','--accent','--line'];
+        vars.forEach((name,i)=>document.body.style.setProperty(name,themes[current][i]));
+        document.querySelector('meta[name="theme-color"]').setAttribute('content',themes[current][0]);
+        cards.forEach((card,i)=>{
+          const offset=i-current,abs=Math.abs(offset);
+          card.style.setProperty('--offset',offset);
+          card.style.setProperty('--abs',abs);
+          card.style.setProperty('--visibility',abs>2?0:1);
+          card.style.pointerEvents=abs>2?'none':'auto';
+          card.setAttribute('aria-current',String(i===current));
+          card.tabIndex=abs>2?-1:0;
+        });
+        dots.forEach((dot,i)=>{dot.classList.toggle('active',i===current);dot.setAttribute('aria-pressed',String(i===current))});
+        panels.forEach((panel,i)=>{panel.classList.toggle('active',i===current);panel.setAttribute('aria-hidden',String(i!==current))});
+        counter.textContent=String(current+1).padStart(2,'0');
+      }
+      cards.forEach((card,i)=>card.addEventListener('click',()=>select(i)));
+      dots.forEach((dot,i)=>dot.addEventListener('click',()=>select(i)));
+      document.getElementById('prev').addEventListener('click',()=>select(current-1));
+      document.getElementById('next').addEventListener('click',()=>select(current+1));
+      carousel.addEventListener('keydown',ev=>{if(ev.key==='ArrowLeft'){ev.preventDefault();select(current-1);cards[current].focus()}if(ev.key==='ArrowRight'){ev.preventDefault();select(current+1);cards[current].focus()}});
+      let downX=null;
+      carousel.addEventListener('touchstart',e=>{downX=e.changedTouches[0].clientX},{passive:true});
+      carousel.addEventListener('touchend',e=>{if(downX===null)return;const delta=e.changedTouches[0].clientX-downX;if(Math.abs(delta)>45)select(current+(delta<0?1:-1));downX=null},{passive:true});
+
+
+      function getSceneEffect(story, index){
+        const fx = {
+          '叶甫盖尼·奥涅金':['glow sparkle','glow','snow fog','glow breeze','glow sparkle water'],
+          '上尉的女儿':['snow','glow snow','snow embers smoke','snow fog','sparkle glow'],
+          '死魂灵':['fog rain','fog','glow sparkle','fog rain','fog'],
+          '罪与罚':['glow','glow rain','glow','snow fog','glow'],
+          '战争与和平':['glow sparkle','sparkle glow','smoke embers','embers smoke','glow breeze'],
+          '樱桃园':['petals glow','petals','petals breeze','fog petals','petals glow'],
+          '彼得堡故事集':['fog rain','glow','fog','rain','fog glow'],
+          '地下室手记':['glow','glow','glow'],
+          '白痴':['glow','snow','glow'],
+          '安娜·卡列尼娜':['sparkle glow','water fog','glow'],
+          '复活':['glow','rain fog','glow'],
+          '海鸥':['water glow','water sparkle','glow'],
+          '万尼亚舅舅':['glow','breeze','glow'],
+          '三姐妹':['fog','snow','glow']
+        };
+        return (fx[story] && fx[story][index]) || 'glow';
+      }
+
+      document.querySelectorAll('.narrative-gallery').forEach(gallery=>{
+        const buttons=[...gallery.querySelectorAll('.narrative-thumb')];
+        const image=gallery.querySelector('.narrative-image');
+        const zh=gallery.querySelector('.narrative-zh');
+        const ru=gallery.querySelector('.narrative-ru');
+        const progress=gallery.querySelector('.story-progress');
+        const stage=gallery.querySelector('.narrative-stage');
+        let active=0;
+        function show(n){
+          if(!buttons.length)return;
+          active=(n+buttons.length)%buttons.length;
+          const button=buttons[active];
+          const preview=button.querySelector('img');
+          image.src=preview.getAttribute('src'); image.alt=preview.alt;
+          image.classList.remove('refresh');void image.offsetWidth;image.classList.add('refresh');
+          zh.textContent=button.querySelector('span').textContent.replace(/^\d+ · /,'');
+          ru.textContent=button.querySelector('small').textContent;
+          progress.textContent=String(active+1).padStart(2,'0')+' / '+String(buttons.length).padStart(2,'0');
+          stage.dataset.effect = getSceneEffect(gallery.dataset.story, active);
+          buttons.forEach((el,i)=>{el.classList.toggle('is-selected',i===active);el.setAttribute('aria-pressed',String(i===active));});
+          button.scrollIntoView({block:'nearest',inline:'nearest',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+        }
+        buttons.forEach((btn,i)=>btn.addEventListener('click',()=>show(i)));
+        gallery.querySelector('.story-prev').addEventListener('click',()=>show(active-1));
+        gallery.querySelector('.story-next').addEventListener('click',()=>show(active+1));
+        gallery.addEventListener('keydown',e=>{if(!e.target.closest('.narrative-thumb,.narrative-arrows'))return;if(e.key==='ArrowLeft'){e.preventDefault();show(active-1)}if(e.key==='ArrowRight'){e.preventDefault();show(active+1)}});
+        show(0);
+      });
+
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let carouselTimer = null;
+      function clearCarouselAuto(){ if(carouselTimer){ clearInterval(carouselTimer); carouselTimer = null; } }
+      function startCarouselAuto(){
+        if(reduceMotion) return;
+        clearCarouselAuto();
+        carouselTimer = setInterval(()=>{
+          const nextIndex = (current + 1) % cards.length;
+          select(nextIndex);
+        }, 6800);
+      }
+      ['mouseenter','focusin','touchstart'].forEach(evt=>carousel.addEventListener(evt, clearCarouselAuto, {passive:true}));
+      ['mouseleave','focusout'].forEach(evt=>carousel.addEventListener(evt, startCarouselAuto));
+      const galleryControllers = [];
+      document.querySelectorAll('.narrative-gallery').forEach(gallery=>{
+        const stage = gallery.querySelector('.narrative-stage');
+        let timer = null;
+        let isVisible = true;
+        function pause(){ if(timer){ clearInterval(timer); timer=null; } gallery.dataset.auto='off'; }
+        function resume(){ if(reduceMotion || !isVisible) return; pause(); gallery.dataset.auto='on'; timer=setInterval(()=>gallery.querySelector('.story-next')?.click(),5600); }
+        ['mouseenter','focusin','touchstart'].forEach(evt=>gallery.addEventListener(evt,pause,{passive:true}));
+        ['mouseleave','focusout'].forEach(evt=>gallery.addEventListener(evt,resume));
+        galleryControllers.push({gallery,pause,resume,setVisible(v){isVisible=v; v?resume():pause();}});
+        stage?.classList.add('is-playing');
+      });
+      const observer = !reduceMotion && 'IntersectionObserver' in window ? new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+          const found = galleryControllers.find(x=>x.gallery===entry.target);
+          if(found) found.setVisible(entry.isIntersecting && entry.intersectionRatio > 0.35);
+        });
+      },{threshold:[0,.35,.75]}) : null;
+      galleryControllers.forEach(x=>{ observer ? observer.observe(x.gallery) : x.resume(); });
+      document.addEventListener('visibilitychange',()=>{
+        if(document.hidden){ clearCarouselAuto(); galleryControllers.forEach(x=>x.pause()); }
+        else { startCarouselAuto(); galleryControllers.forEach(x=>x.resume()); }
+      });
+
+      select(0);
+      startCarouselAuto();
+    })();
+  </script>
+</body>
+</html>
